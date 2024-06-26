@@ -1,0 +1,42 @@
+#comment-section {
+    width: 50%;
+    margin: auto;
+}
+
+#comments-container {
+    margin-top: 20px;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.like-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.like-button:disabled {
+    background-color: #ccc;
+}
+
+.like-count {
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    font-size: 0.8em;
+    color: #666;
+}

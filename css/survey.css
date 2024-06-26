@@ -1,0 +1,120 @@
+body{
+    background-image: url(https://deadbydaylight.com/static/ba329474c2a982956abc32cc4b67a120/bb1c4/Screenshot_3_33879d7bc3.jpg);
+    background-size:cover;
+    background-position:center;
+  }
+  #offcanvasNavbar{
+    background-color: #FF6600;
+    opacity: 0.8;
+  }
+#titleBox{
+    border: 5px solid #FF6600 ;
+    border-radius: 10px;
+    background-image:linear-gradient(#666666,#000000 );
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    margin-top: 70px;
+
+}
+#title{
+    text-align: center;
+    color: #fd934d ;
+    text-shadow: 3px 2px 3px #3d5a66 ;
+}
+#description{
+    text-align: center;
+    color: #FF6600 ;
+    text-shadow: 3px 2px 4px #3d5a66 ;
+    font-size: 17px;
+}
+label{
+    color: #FF6600 ;
+    text-shadow: 3px 2px 4px #3d5a66 ;
+}
+#surveyBox{
+    border: 5px solid #FF6600 ;
+    border-radius: 50px;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-image:linear-gradient(#666666,#000000 );
+}
+fieldset{
+    border-color:#FF6600 ;
+}
+#submit{
+    background-color: #FFEAD4;
+}
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+select{
+    width: 575px;
+    height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #d1a16e ;
+}
+#username{
+    background-color:#d1a16e;
+    color: #000000;
+    border: 1px solid #fd934d;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 550px;
+
+}
+#email{
+    background-color:#d1a16e;
+    border: 1px solid #fd934d;
+    margin-bottom: 20px;
+    width: 550px;
+    margin-top: 5px;
+}
+#name{
+    background-color: #d1a16e;
+    border: 1px solid #fd934d;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 550px;
+    
+}
+#textArea{
+    background-color: #d1a16e;
+    border: 1px solid #fd934d;
+    width: 575px;
+    margin-top: 5px;
+}
+legend{
+    color: #FF6600 ;
+    text-shadow: 3px 2px 4px #3d5a66 ;
+}
+fieldset{
+    margin-bottom: 15px;
+    
+}
+#inputMessage{
+    color: #FF6600 ;
+    text-shadow: 3px 2px 4px #3d5a66 ;
+}
+#submit{
+    width: 575px;
+    margin-top: 20px;
+    background-color: #6e8b97;
+    border: 1px solid #3d5a66;
+    color: #000 ;
+}
+span{
+    color: #FF6600 ;
+    text-shadow: 3px 2px 4px #3d5a66 ;
+}

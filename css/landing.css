@@ -1,0 +1,415 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e5135;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: #000;
+}
+/* navbar  */
+.navbar{
+    background-color: #52801f !important;
+}
+#offcanvasNavbar{
+    background-image: linear-gradient(#52801f,#7abe62);
+    opacity: 0.8;
+}
+.dropdown-menu{
+    background-color: #52801f;
+}
+#welcomeBox {
+    background-image: linear-gradient(#aaaaaa,#52801f,#aaaaaa );
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255);
+    width: 100%;
+    max-height:750px ;
+    padding: 50px;
+    color: black;
+    margin-top: 70px;
+    max-height: 1100px;
+}
+
+.lineUp{
+    text-align: center;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 30px;
+}
+.button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #79bd44;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.button:hover {
+    animation: cloud 1.5s infinite ease-in-out;
+    background-color: #e6b6bb;
+}
+@keyframes cloud {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Carousel CSS */
+.carousel {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    padding-top: 45px;
+}
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item{
+    border: 2px solid #0056b3;
+    background-color: #e6b6bb;
+    width: 100%;
+    max-width: 600px;
+    left: 325px;
+    max-height: 200px;
+    padding: 10px;
+    height: 125px;
+  justify-content: center;
+}
+#carouselContainer{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #52801f;
+}
+.carousel-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    text-align: left;
+    max-height: 500px;
+}
+/* logo */
+#logoBox {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoBackground {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    box-shadow: 0px 7px 20px #52801fe6;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color as needed */
+    text-align: center;
+}
+
+.logo-text {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    font-size: 5rem; /* Adjust font size as needed */
+    z-index: 1;
+}
+
+#logo {
+    width: 300px; /* Adjust logo size as needed */
+    height: auto;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+/* Login Form */
+#welcomeText{ 
+    background: linear-gradient(to bottom, rgba(170, 170, 170, 0.7), rgba(170, 170, 170, 0));
+    margin-top: 40px;
+    padding: 10px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.login-form input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+    width: 80%;
+    max-width: 400px;
+}
+.login-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #e6b6bb;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login-form button:hover {
+    background-color: #0056b3;
+}
+.welcome-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+#loginBox{
+    display: flex;
+    align-items: center;
+}
+#middleBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 40px;
+    margin: 2px;
+    background-color: #79bd44;
+    width: 33%;
+    margin-right: 53px;
+}
+#gamerJesse{
+    width: 25%;
+    padding-left: 5px;
+    opacity: 0.9;
+    
+}
+#gamerTye{
+    width: 35%;
+    opacity: 0.9;
+}
+#lounge{
+    background-image: url(https://img.freepik.com/premium-photo/amazing-gaming-room-with-green-color-atmosphere-neon-generative-ai_850810-2399.jpg);
+    margin-bottom: 50px;
+}
+
+/* Spotify Player */
+.spotify-player {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    width: 400px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.1;
+    transition: opacity 0.3s;
+}
+.spotify-player:hover {
+    opacity: 1;
+}
+.spotify-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px 0 0 8px;
+}
+/* video css */
+#video{
+    border: 1px solid #f0f8ff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#releaseVideo{
+    border: 2px solid #f0f8ff;
+    box-shadow: 2px 0px 5px #000;
+    position: relative;
+    left: 290px;
+}
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .silkscreen-bold {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .chakra-petch-light {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .chakra-petch-regular {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .chakra-petch-medium {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .chakra-petch-semibold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .chakra-petch-bold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .chakra-petch-light-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .chakra-petch-regular-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .chakra-petch-medium-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .chakra-petch-semibold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .chakra-petch-bold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+.footer {
+    margin-top: 40px;
+    background-color: #79bd44; /* Green color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+}  
+   
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+     font-size: small;
+}
+
+.footer h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Styling the content-wrapper to align text and video side by side */
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Styling for the text content */
+.text-content {
+    flex: 1;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Styling for the video content */
+.video-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ensuring the video is sized properly */
+#video {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adding a responsive design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .video-content {
+        padding-top: 0;
+    }
+
+    #video {
+        max-width: 100%;
+    }
+}

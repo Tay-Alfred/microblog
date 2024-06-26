@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Up Lounge - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<header>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="landing.html"><img src="images/lvluplogo.png" width="55px" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title silkscreen-regular" id="offcanvasNavbarLabel">Level Up Lounge</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body silkscreen-regular">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="survey.html">Dead By Daylight Survey (New!)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="speakeezy.html">Speakeezy Station</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Profile
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="registration.html">Sign Up</a></li>
+                                <li><a class="dropdown-item" href="#loginBox">Log In</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="profile.html">Edit Lounge</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <!-- Add some images here of like different shared posts idk. Give it a modern type feel and mosiac the images together? Maybe work a js carousel so the individual images cycles between each other? -->
+    <div class="image-logo" id="logoBox">
+        <img src="images/banner-lounge.jpg" alt="Green lounge setting" id="logoBackground">
+        <div class="overlay-content">
+            <h1 class="logo-text silkscreen-regular">Level Up Lounge</h1>
+            <img src="images/lvluplogo.png" alt="Gamer girl logo" id="logo">
+        </div>
+
+    </div>
+    <div class="container" id="welcomeBox">
+
+        <div class="lineUp chakra-petch-semibold">
+            <h1>Elevate your gaming experience</h1>
+            <h4>Welcome to Level Up Lounge, the ultimate online hub for gamers around the world! Whether you’re a casual
+                player, an eSports enthusiast, or a seasoned pro, you’ve found your new favorite hangout spot. Our blog
+                is dedicated to providing you with the latest news, tips, reviews, and insights into the gaming
+                universe. At Level Up Lounge, we’re more than just a blog – we’re a community.<section></section>
+            </h4>
+        </div>
+        <div class="content-wrapper">
+            <div class="video-content">
+                <video id="video"  autoplay muted loop style="box-shadow: 3px 3px 4px black;">
+                    <source src="images/videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container chakra-petch-semibold">
+        <h4>Not with us? Join our ranks now</h4>
+        <!-- Button to trigger modal -->
+        <button class="button" data-bs-toggle="modal" data-bs-target="#registrationModal">Join Us</button>
+    </div>
+
+  
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registrationModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Registration form content -->
+                    <form id="registrationForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" autocomplete="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email"  autocomplete="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"  autocomplete="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                    <div id="registration-error" style="display: none; color: red;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <section id="video">
+        <h1 class="text-center">Latest Game Releases for 2024</h1>
+        <video id="releaseVideo" width="600" controls>
+            <source src="musicFiles/brandnew.mp4" type="video/mp4">
+            <source src="musicFiles/brandnew.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </section> -->
+    <!-- This section will be the login information -->
+
+    <div class="container chakra-petch-semibold" id="lounge">
+        <h2 id="welcomeText" style="color: #e7c3c3; text-shadow: 3px 5px 3px #7abe62;" class="text-center">Welcome Home!
+            The Lounge Awaits</h2>
+        <div class="login-form" id="loginForm">
+
+            <img src="images/transparentgirl3.png" alt="Gamer girl Tye" id="gamerTye">
+            <div class="container" id="middleBox">
+                <!-- <span class="text-center">Welcome Home! Your canvas is waiting</span> -->
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <label for="rememberMe">
+                    <input type="checkbox" id="rememberMe">
+                    Remember Me On This Device
+                </label>
+                <button type="button" onclick="login()">Login</button>
+            </div>
+            <img src="images/transparent4.png" alt="Gamer Jesse" class="gamer-girls" id="gamerJesse">
+        </div>
+
+    </div>
+    <div class="welcome-message" id="welcomeMessage">
+        <h2 id="welcomeText"></h2>
+        <button class="button chakra-petch-semibold" onclick="window.location.href='profile.html'">Walk into your Lounge</button>
+
+    </div>
+
+    <div class="container lineUp chakra-petch-semibold" id="carouselContainer">
+        <p>Here's what you missed</p>
+        <div class="carousel text-center">
+            <div class="carousel-item active carousel-card">@vibequeen99<bk class="section-break"></bk>
+
+                Posted: "Feeling like a literal potato today 🥔. Just wanna stay in bed and binge Netflix. Anyone got
+                good show recs? 📺 #lazyday #selfcare"</div>
+
+            <div class="carousel-item carousel-card">@sk8rboi22<bk class="section-break"></bk>
+
+                Posted: "So stoked for the weekend, but today's mood is meh. Kinda over everything rn. Anyone else
+                just wanna fast forward to Saturday? ⏩ #tgif #cantwait"</div>
+
+            <div class="carousel-item carousel-card">@litfit_jane<bk class="section-break"></bk>
+
+                Posted: "Woke up super energized but crashed by noon. Why does life have to be so exhausting? 😩 Need
+                a nap, like ASAP. #tiredaf #needcoffee"</div>
+
+            <div class="carousel-item carousel-card">@gamer_gurlxoxo<bk class="section-break"></bk>
+
+                Posted: "Mood: That feeling when you ace your final but your brain is still fried. Mixed vibes today.
+                🧠💥 Gonna game it out tonight. 🎮 #finalsweek #gamerlife"!</div>
+
+            <div class="carousel-item carousel-card">@eco_warrior21<bk class="section-break"></bk>
+
+                Posted: "Feeling hella anxious about the future 🌎. But trying to stay positive and do my part. Anyone
+                else feeling eco-anxiety? #climatechange #stay.</div>
+        </div>
+    </div>
+    </div>
+    <!-- Add a video down here of like a players clips -->
+    <!-- Move this player to the posts page and the music page. -->
+    <div class="spotify-player">
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="75%" height="380"
+            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content chakra-petch-semibold">
+            <p>Contact Us:</p>
+            <p>Email: info@leveluplounge.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Game St, Gamer City, GA 12345</p>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="scripts/landing.js"></script>
+<script src="auth.js"></script>
+<script src="scripts/registration.js"></script>
+
+</html>
+
+<!-- color palete hex color codes
+#e7c3c3 (pink)
+#f5f5f5 (light white)
+#0f3c44 (teal blue dark)
+#e2d2c5 (light pastel baby pink)
+#e6b6bb (another more prominemt pink)
+
+Im thinking about making the first  pink as trhe background an dusiong the the other pinks for button cvolors and animations. also box shadows. We can use the teal for box colors and make the text white or gray-->
