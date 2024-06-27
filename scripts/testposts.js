@@ -1,50 +1,90 @@
-const postsContainer = document.getElementById('posts-container');
-const createPostForm = document.getElementById('create-post-form');
-const postContent = document.getElementById('post-content');
+"use strict";
 
-const API_BASE_URL = 'http://microbloglite.us-east-2.elasticbeanstalk.com/';
+document.addEventListener("DOMContentLoaded", function () {
+    const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
+    const postsSection = document.querySelector("#posts");
+    const messageTextarea = document.getElementById("message");
+    const submitButton = document.querySelector(".submitbutton input[type='submit']");
 
-async function fetchPosts() {
-  const response = await fetch(`${API_BASE_URL}/posts`);
-  const posts = await response.json();
-  return posts;
-}
+    // Fetch and display posts
+    function fetchPosts() {
+        const loginData = getLoginData();
+        if (!loginData.token) {
+            console.error("No authorization token found.");
+            postsSection.innerHTML = '<p>Please log in to view posts.</p>';
+            return;
+        }
 
-function displayPosts(posts) {
-  postsContainer.innerHTML = '';
-  for (const post of posts) {
-    const postElement = document.createElement('div');
-    postElement.classList.add('card', 'mb-4');
-    postElement.innerHTML = `
-      <div class="card-header">${post.user.username}</div>
-      <div class="card-body">
-        <p class="card-text">${post.content}</p>
-      </div>
-    `;
-    postsContainer.appendChild(postElement);
-  }
-}
+        fetch(apiBaseURL + "/api/posts", {
+            headers: {
+                "Authorization": `Bearer ${loginData.token}`
+            }
+        })
+            .then(response => response.json())
+            .then(posts => {
+                postsSection.innerHTML = '';
+                posts.forEach(post => {
+                    const postElement = document.createElement("div");
+                    postElement.className = "post";
+                    postElement.innerHTML = `
+                    <div class="block">
+                        <h2>${post.username}</h2>
+                        <p>${post.text}</p>
+                    </div>
+                    `;
+                    postsSection.appendChild(postElement);
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching posts:", error);
+                postsSection.innerHTML = '<p>Failed to load posts.</p>';
+            });
+    }
 
-async function createPost(content) {
-  const response = await fetch(`${API_BASE_URL}/posts`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ content })
-  });
-  const post = await response.json();
-  return post;
-}
+    // Post a new message
+    function postMessage() {
+        const loginData = getLoginData(); // Retrieve login data
+        if (!loginData.token) {
+            console.error("No authorization token found.");
+            alert("You must be logged in to post a message.");
+            return;
+        }
 
-createPostForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  if (!postContent.value.trim()) {
-    return;
-  }
-  const post = await createPost(postContent.value);
-  postContent.value = '';
-  displayPosts([post]);
+        const message = messageTextarea.value.trim();
+        if (!message) {
+            alert("Message cannot be empty.");
+            return;
+        }
+
+        const postData = {
+            text: message
+        };
+
+        fetch(apiBaseURL + "/api/posts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${loginData.token}`
+            },
+            body: JSON.stringify(postData)
+        })
+        .then(response => response.json())
+        .then(post => {
+            console.log("Post created successfully:", post);
+            messageTextarea.value = ''; // Clear the textarea
+            fetchPosts(); // Refresh the posts
+        })
+        .catch(error => {
+            console.error("Error posting message:", error);
+            alert("Failed to post message.");
+        });
+    }
+    // Event listener for the submit button
+    submitButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent form submission
+        postMessage();
+    });
+
+    fetchPosts();
 });
 
-fetchPosts().then(displayPosts);
