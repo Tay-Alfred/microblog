@@ -20,6 +20,11 @@ signupForm.onsubmit = function (event) {
     registerUser(signupData);
 }
 
+    const user = {
+        username:signupForm.username.value,
+    };
+    localStorage.setItem('user', JSON.stringify(user));
+// This is the start of the javascript for the arrow animation
 const modal = document.getElementById("myModal");
         const btn = document.getElementById("openModalBtn");
         const span = document.getElementsByClassName("close")[0];
