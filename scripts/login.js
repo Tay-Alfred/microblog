@@ -6,8 +6,8 @@ loginForm.onsubmit = function (event) {
     event.preventDefault();
 
     const loginData = {
-        loginUsername: loginForm.loginUsername.value,
-        loginPassword: loginForm.loginPassword.value
+        username: loginForm.loginUsername.value,
+        password: loginForm.loginPassword.value
     }
 
     loginForm.loginButton.disabled = true;

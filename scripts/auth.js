@@ -44,23 +44,31 @@ function login (loginData) {
     };
 
     return fetch(apiBaseURL + "/auth/login", options)
-        .then(response => response.json())
-        .then(loginData => {
-            if (loginData.message === "Invalid username or password") {
-                console.error(loginData)
-                // Here is where you might want to add an error notification 
-                // or other visible indicator to the page so that the user is  
-                // informed that they have entered the wrong login info.
-                return null
-            }
+    .then(response => response.json())
+    .then(loginData => {
+        if (loginData.hasOwnProperty("message")) {
+            console.error(loginData);
+            displayLoginError(loginData.message);
+            return null;
+        }
 
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
-            window.location.assign("/posts");  // redirect
+            window.location.assign("/profile.html");  // redirect
 
             return loginData;
+        })
+        .catch(error => {
+            console.error("Network or server error:", error);
+            displayLoginError("Unable to connect.");
         });
 }
-
+function displayLoginError(message) {
+    const errorElement = document.getElementById("login-error");
+    if (errorElement) {
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+    }
+}
 
 // This is the `logout()` function you will use for any logout button
 // which you may include in various pages in your app. Again, READ this
