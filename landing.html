@@ -14,55 +14,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/registration.css">
+      <!-- Run BEFORE page is finished loading (before window.onload): -->
+      <script src="scripts/auth.js"></script>
 </head>
-<header>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="landing.html"><img src="images/lvluplogo.png" width="55px" alt="Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title silkscreen-regular" id="offcanvasNavbarLabel">Level Up Lounge</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body silkscreen-regular">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="profile.html">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="survey.html">Dead By Daylight Survey (New!)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="speakeezy.html">Speakeezy Station</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Profile
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="registration.html">Sign Up</a></li>
-                                <li><a class="dropdown-item" href="#loginBox">Log In</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="profile.html">Edit Lounge</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
 
 <body>
     <!-- Add some images here of like different shared posts idk. Give it a modern type feel and mosiac the images together? Maybe work a js carousel so the individual images cycles between each other? -->
@@ -73,78 +28,16 @@
             <img src="images/lvluplogo.png" alt="Gamer girl logo" id="logo">
         </div>
 
-    </div>
-    <div class="container" id="welcomeBox">
-
-        <div class="lineUp chakra-petch-semibold">
-            <h1>Elevate your gaming experience</h1>
-            <h4>Welcome to Level Up Lounge, the ultimate online hub for gamers around the world! Whether you’re a casual
-                player, an eSports enthusiast, or a seasoned pro, you’ve found your new favorite hangout spot. Our blog
-                is dedicated to providing you with the latest news, tips, reviews, and insights into the gaming
-                universe. At Level Up Lounge, we’re more than just a blog – we’re a community.<section></section>
-            </h4>
-        </div>
-        <div class="content-wrapper">
-            <div class="video-content">
-                <video id="video"  autoplay muted loop style="box-shadow: 3px 3px 4px black;">
-                    <source src="images/videoplayback.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-
-    <div class="button-container chakra-petch-semibold">
+    </div>  
+       <div class="button-container chakra-petch-semibold">
         <h4>Not with us? Join our ranks now</h4>
         <!-- Button to trigger modal -->
-        <button class="button" data-bs-toggle="modal" data-bs-target="#registrationModal">Join Us</button>
+        <button class="button" data-bs-toggle="modal" data-bs-target="#registrationModal" id="openModalBtn">Join Us</button>
     </div>
-
-  
-    <!-- Registration Modal -->
-    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registrationModalLabel">Sign Up</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Registration form content -->
-                    <form id="registrationForm">
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" autocomplete="username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email"  autocomplete="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password"  autocomplete="password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
-                    </form>
-                    <div id="registration-error" style="display: none; color: red;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <section id="video">
-        <h1 class="text-center">Latest Game Releases for 2024</h1>
-        <video id="releaseVideo" width="600" controls>
-            <source src="musicFiles/brandnew.mp4" type="video/mp4">
-            <source src="musicFiles/brandnew.mp4" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
-    </section> -->
-    <!-- This section will be the login information -->
-
     <div class="container chakra-petch-semibold" id="lounge">
         <h2 id="welcomeText" style="color: #e7c3c3; text-shadow: 3px 5px 3px #7abe62;" class="text-center">Welcome Home!
             The Lounge Awaits</h2>
-        <div class="login-form" id="loginForm">
+        <div class="login-form" id="login">
 
             <img src="images/transparentgirl3.png" alt="Gamer girl Tye" id="gamerTye">
             <div class="container" id="middleBox">
@@ -161,7 +54,22 @@
         </div>
 
     </div>
-    <div class="welcome-message" id="welcomeMessage">
+    <div class="container" id="welcomeBox">
+
+        <div class="lineUp chakra-petch-semibold">
+            <h1>Latest Drops in the Lounge</h1>
+            <h4>In Genshin Impact's latest update, version 2.7, players delve into the mysterious nation of Khaenri'ah with new quests featuring character Yae Miko. This update introduces fresh storylines, challenges, and characters, enhancing the exploration and adventure in Teyvat.<section></section>
+            </h4>
+        </div>
+        <div class="content-wrapper">
+            <div class="video-content">
+                <video id="video"  autoplay muted loop style="box-shadow: 3px 3px 4px black;">
+                    <source src="images/genshin.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="welcome-message" id="welcomeMessage">
         <h2 id="welcomeText"></h2>
         <button class="button chakra-petch-semibold" onclick="window.location.href='profile.html'">Walk into your Lounge</button>
 
@@ -197,6 +105,70 @@
         </div>
     </div>
     </div>
+    </div>
+
+
+
+  
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" id="myModal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registrationModalLabel">Upgrade Ready: New Level Up Soldier Loading</h5>
+                    <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Registration form content -->
+                    <form id="registrationForm" class="signup">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" autocomplete="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="name" class="form-control" id="fullname"  autocomplete="fullname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"  autocomplete="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="signupButton">Sign Up</button>
+                    </form>
+                    <div id="registration-error" style="display: none; color: red;"></div>
+                </div>
+            </div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+        </div>
+    </div>
+    <!-- <section id="video">
+        <h1 class="text-center">Latest Game Releases for 2024</h1>
+        <video id="releaseVideo" width="600" controls>
+            <source src="musicFiles/brandnew.mp4" type="video/mp4">
+            <source src="musicFiles/brandnew.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </section> -->
+    <!-- This section will be the login information -->
+
+   
+    
     <!-- Add a video down here of like a players clips -->
     <!-- Move this player to the posts page and the music page. -->
     <div class="spotify-player">
@@ -204,15 +176,6 @@
             frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
 
-
-    <footer class="footer">
-        <div class="footer-content chakra-petch-semibold">
-            <p>Contact Us:</p>
-            <p>Email: info@leveluplounge.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Address: 123 Game St, Gamer City, GA 12345</p>
-        </div>
-    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

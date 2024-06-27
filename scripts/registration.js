@@ -1,60 +1,66 @@
 
-const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com/"; // Replace with your actual API base URL
 
+"use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-    const registrationForm = document.getElementById("registrationForm");
+//const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com/"; // Replace with your actual API base URL
 
-    registrationForm.addEventListener("submit", (event) => {
-        event.preventDefault();
+const signupForm = document.querySelector(".signup");
 
-        const signupData = {
-            username: document.getElementById("username").value,
-            email: document.getElementById("email").value,
-            password: document.getElementById("password").value,
-        };
+signupForm.onsubmit = function (event) {
+    event.preventDefault();
 
-        registerUser(signupData);
-    });
-});
-
-function registerUser(signupData) {
-    const options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "accept": "application/json",
-        },
-        body: JSON.stringify(signupData),
-    };
-
-    return fetch(apiBaseURL + "/api/users", options)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Server responded with status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(registerData => {
-            if (registerData.hasOwnProperty("message")) {
-                console.error(registerData);
-                displayRegistrationError(registerData.message);
-                return null;
-            }
-
-            console.log("User registered successfully:", registerData);
-            // Optionally, redirect the user or show a success message
-        })
-        .catch(error => {
-            console.error("Network or server error:", error);
-            displayRegistrationError("Unable to connect. " + error.message);
-        });
-}
-
-function displayRegistrationError(message) {
-    const errorElement = document.getElementById("registration-error");
-    if (errorElement) {
-        errorElement.textContent = message;
-        errorElement.style.display = 'block';
+    const signupData = {
+        username: signupForm.username.value,
+        fullName: signupForm.fullname.value,
+        password: signupForm.password.value
     }
+
+    signupForm.signupButton.disabled = true;
+    
+    registerUser(signupData);
 }
+
+const modal = document.getElementById("myModal");
+        const btn = document.getElementById("openModalBtn");
+        const span = document.getElementsByClassName("close")[0];
+        const arrowsContainer = document.getElementById("arrowsContainer");
+
+        btn.onclick = function() {
+            modal.style.display = "flex";
+            generateArrows();
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+            clearArrows();
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                clearArrows();
+            }
+        }
+
+        function generateArrows() {
+            for (let i = 0; i < 17; i++) {
+                const arrow = document.createElement('div');
+                arrow.className = 'arrow';
+                arrow.style.left = getRandomLeft();
+                arrow.style.animationDelay = getRandomDelay();
+                arrow.style.setProperty('--animation-delay', getRandomDelay());
+                arrowsContainer.appendChild(arrow);
+            }
+        }
+
+        function clearArrows() {
+            arrowsContainer.innerHTML = '';
+        }
+
+        function getRandomDelay() {
+            return Math.random() * 5 + "s";
+        }
+
+        function getRandomLeft() {
+            return Math.floor(Math.random() * 91) + 5 + "%";
+        }
