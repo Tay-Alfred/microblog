@@ -11,12 +11,28 @@ body{
     z-index: -1;
     opacity: 0.6;
 }
+.color-animation {
+    color: #7abe62;
+    animation-name: color-change;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes color-change {
+    0% { color: orange; }
+    25% { color: #e6b6bb; }
+    50% { color: yellow; }
+    75% { color: #79cac1; }
+    100% { color: orange; }
+  }
 /* Profile container styles */
 .profile-container {
     margin-top: 10%;
     max-width: 800px;
     margin: 2em auto;
-    background-color: #52801f;
+    background-image: linear-gradient(#52801f,#0e5135);
     opacity: 1;
     padding: 2em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -94,10 +110,18 @@ body{
     text-decoration: none;
     font-size: 1.2em;
 }
-
+#createButton{
+    background-color: black;
+}
+#createButton:hover{
+    background-color: #aaa;
+    box-shadow: 3px 4px 5px #52801f;
+    color: white;
+    opacity: 100%;
+}
 /* Footer styles */
 .footer {
-    background-color: #52801f;
+    background-color: #0e5135;
     color: #fff;
     text-align: center;
     padding: 1em 0;

@@ -10,14 +10,14 @@
 </head>
 <body>
   <header>
-    <nav class="navbar bg-body-tertiary" style="background-color: #52801f !important;">
+    <nav class="navbar bg-body-tertiary" style="background-color: #52801f !important; opacity: 0.8;">
         <div class="container-fluid">
             <a class="navbar-brand" href="landing.html"><img src="images/lvluplogo.png" width="55px" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" style="background-image: linear-gradient(#52801f,#7abe62) !important;
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" style="background-image: linear-gradient(#52801f,#0e5135) !important;
     opacity: 0.8;"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
@@ -27,10 +27,7 @@
                 <div class="offcanvas-body silkscreen-regular">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="profile.html">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="posts.html">Check into the Lounge</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="survey.html">Dead By Daylight Survey (New!)</a>
@@ -44,8 +41,6 @@
                                 Profile
                             </a>
                             <ul class="dropdown-menu" style="background-color: #52801f;">
-                                <li><a class="dropdown-item" href="registration.html">Sign Up</a></li>
-                                <li><a class="dropdown-item" href="#loginBox">Log In</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -62,33 +57,33 @@
   <div class="profile-container">
     <div class="profile-header">
         <img src="images/profile-pic.JPG" alt="Profile Picture" class="profile-pic">
-        <h2 id="username"></h2>
+        <h2 id="username" class="color-animation"></h2>
         <textarea id="profile-bio" class="profile-bio" style="width: 550px;">
           A brief bio about yourself goes here. You can include your interests, hobbies, or professional background.
         </textarea>
-        <button id="save-bio-button">Save</button>
+        <button id="save-bio-button" class=" btn color-animation">Save</button>
     </div>
 
-    <div class="contact-info">
-        <h3>Contact Information</h3>
+    <div class="contact-info color-animation">
+        <h3 class="color-animation">Contact Information</h3>
         <p>Email: <a href="mailto:your.email@example.com">captainsnorklesupreme@hotmail.com</a></p>
         <p>Phone: (346) 555-7890</p>
     </div>
 
     <div class="social-media">
-        <h3>Follow Me</h3>
+        <h3 class="color-animation">Follow Me</h3>
         <ul>
-            <li><a href="#" target="_blank">Twitter</a></li>
-            <li><a href="#" target="_blank">LinkedIn</a></li>
-            <li><a href="#" target="_blank">GitHub</a></li>
+            <li><a href="#" target="_blank" class="color-animation">Twitter</a></li>
+            <li><a href="#" target="_blank" class="color-animation">LinkedIn</a></li>
+            <li><a href="#" target="_blank" class="color-animation">GitHub</a></li>
         </ul>
     </div>
+     <button id="createButton" class="btn color-animation" onclick="window.location.href='posts.html'"> Create New Post</button>
 </div>
 
-  <button class="button" onclick="window.location.href='posts.html'"> Create New Post</button>
 </main>
 <footer class="footer">
-  <div class="footer-content chakra-petch-semibold" style="height: 50px;">
+  <div class="footer-content chakra-petch-semibold color-animation " style="height: 50px;">
       <p>Contact Us:</p>
       <p>Email: info@leveluplounge.com</p>
   </div>

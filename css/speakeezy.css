@@ -1,3 +1,44 @@
+
+
+
+
+/* start of youtube css */
+#video{
+    border: 15px solid #007bff;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+#youtube-video{
+    border: 15px solid red;
+   justify-content: center;
+   margin-left: 20%;
+}
+/* end of youtube css */
+.text-content{
+    border: 2px solid pink;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.color-animation {
+    color: #7abe62;
+    animation-name: color-change;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes color-change {
+    0% { color: orange; }
+    25% { color: #e6b6bb; }
+    50% { color: yellow; }
+    75% { color: #79cac1; }
+    100% { color: orange; }
+  }
 #comment-section {
     width: 50%;
     margin: auto;
