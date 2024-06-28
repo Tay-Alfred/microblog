@@ -1,63 +1,19 @@
-
-.container {
-    width: 600px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+body{
+    background-color: #aaa;
 }
-
-.post-form {
-    margin-bottom: 20px;
+#initialUserPost{
+    border: 5px solid red;
+    width: 70%;
 }
-
-.post {
-    background-color: #e0e0e0;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.post .content {
-    margin-bottom: 8px;
-}
-
-.post .author {
-    font-style: italic;
-    font-size: 12px;
-    color: #666;
-}
-
-.post .timestamp {
-    font-size: 12px;
-    color: #999;
-}
-
-.post-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
-    margin-bottom: 10px;
-}
-
-.post-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.post-form button:hover {
-    background-color: #45a049;
+#message{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Spotify Player */
 .spotify-player {
     position: fixed;
-    top: 10%;
+    top: 50%;
     right: 0;
     width: 400px;
     height: 200px;
