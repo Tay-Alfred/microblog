@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #0e5135;
+    background-color: #aaa;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -18,10 +18,8 @@ body {
     background-color: #52801f;
 }
 #welcomeBox {
-    background-image: linear-gradient(#aaaaaa,#52801f,#aaaaaa );
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255);
     width: 100%;
     max-height:500px ;
     padding: 50px;
@@ -29,6 +27,53 @@ body {
     margin-top: 70px;
     max-height: 1100px;
     
+}
+.latest-drops{
+    background-color: #000;
+    color: white;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+.color-animation {
+    color: orange;
+    animation-name: color-change;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes color-change {
+    0% { color: orange; }
+    25% { color: #e6b6bb; }
+    50% { color: yellow; }
+    75% { color: #79cac1; }
+    100% { color: orange; }
+  }
+.box-shadow-animation {
+    animation-name: box-shadow-change;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes box-shadow-change {
+    0% {
+        box-shadow: 0 0 10px orange;
+    }
+    25% {
+        box-shadow: 0 0 10px #e6b6bb;
+    }
+    50% {
+        box-shadow: 0 0 10px yellow;
+    }
+    75% {
+        box-shadow: 0 0 10px #79cac1;
+    }
+    100% {
+        box-shadow: 0 0 10px orange;
+    }
 }
 
 .lineUp{
@@ -53,20 +98,21 @@ p {
     gap: 2rem;
     margin-top: 30px;
 }
-.button {
+.btn {
     padding: 1rem 2rem;
-    border: none;
-    border-radius: 50px;
-    background-color: #79bd44;
-    color: black;
+    background-color: black !important;
+    width: 120px;
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-.button:hover {
+.btn:hover {
     animation: cloud 1.5s infinite ease-in-out;
-    background-color: #e6b6bb;
-}
+        background-color: #aaa !important;
+        box-shadow: 3px 4px 5px #52801f;
+        color: white;
+        opacity: 100%;
+    }
 @keyframes cloud {
     0% {
         transform: translate(0, 0);
@@ -195,7 +241,6 @@ p {
     border: none;
     border-radius: 5px;
     background-color: #e6b6bb;
-    color: black;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -236,7 +281,7 @@ p {
 }
 #lounge{
     background-image: url(https://img.freepik.com/premium-photo/amazing-gaming-room-with-green-color-atmosphere-neon-generative-ai_850810-2399.jpg);
-    opacity: 0.8;
+    opacity: 0.9;
     margin-bottom: 50px;
     box-shadow: 0px 7px 20px #52801fe6;
 }
@@ -269,12 +314,6 @@ p {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-}
-#releaseVideo{
-    border: 2px solid #f0f8ff;
-    box-shadow: 2px 0px 5px #000;
-    position: relative;
-    left: 290px;
 }
 .silkscreen-regular {
     font-family: "Silkscreen", sans-serif;
@@ -421,4 +460,50 @@ p {
     #video {
         max-width: 100%;
     }
+}
+/* backgorund */
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #000 50%, #aaa 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+  /* registration modal */
+  
+  /* Footer styles */
+.footer {
+    background-color: #0e5135;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    bottom: 0;
+    opacity: 0.9;
+}
+.section-break{
+    margin: 20px;
 }

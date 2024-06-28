@@ -110,6 +110,12 @@ body{
     text-decoration: none;
     font-size: 1.2em;
 }
+#save-bio-button:hover{
+    background-color: #aaa !important;
+    box-shadow: 3px 4px 5px #52801f;
+    color: white;
+    opacity: 100%; 
+}
 #createButton{
     background-color: black;
 }
@@ -118,6 +124,26 @@ body{
     box-shadow: 3px 4px 5px #52801f;
     color: white;
     opacity: 100%;
+}
+button{
+    background-color: black;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+}
+button:hover{
+    background-color: red;
+    box-shadow: 3px 4px 5px #52801f;
+    color: white;
+    opacity: 100%;
+}
+.button-flex{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 /* Spotify Player */
 .spotify-player {

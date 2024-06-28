@@ -1,10 +1,10 @@
 // retrive the user information from the landing page
-const user = JSON.parse(localStorage.getItem('user'));
-const name = user.name;
-const userId = user.id;
+// const user = JSON.parse(localStorage.getItem('user'));
+// const name = user.name;
+// const userId = user.id;
 
-const userNameElement = document.getElementById('username');
-userNameElement.textContent = name;
+// const userNameElement = document.getElementById('username');
+// userNameElement.textContent = name;
 
 // saves the new bio to the local server
 

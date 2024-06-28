@@ -70,6 +70,47 @@ function displayLoginError(message) {
     }
 }
 
+
+//Register User
+function registerUser(signupData) {
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "accept": "application/json",
+        },
+        body: JSON.stringify(signupData),
+    };
+    
+
+    return fetch(apiBaseURL + "/api/users", options)
+        .then(response => response.json())
+        .then(registerData => {
+            if (registerData.hasOwnProperty("message")) {
+                console.error(registerData);
+                displayRegistrationError(registerData.message);
+                return null;
+            }
+
+            console.log("User registered successfully:", registerData);
+
+            window.localStorage.setItem("login-data", JSON.stringify(registerData));
+            window.location.assign("../profile.html"); // redirect
+
+            return registerData;
+        })
+        .catch(error => {
+            console.error("Network or server error:", error);
+            displayRegistrationError("Unable to connect.");
+        });
+}
+function displayRegistrationError(message) {
+    const errorElement = document.getElementById("registration-error");
+    if (errorElement) {
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+    }
+}
 // This is the `logout()` function you will use for any logout button
 // which you may include in various pages in your app. Again, READ this
 // function and you will probably want to re-use parts of it for other
@@ -98,46 +139,21 @@ function logout () {
             // error with the fetch request above.
 
             window.localStorage.removeItem("login-data");  // remove login data from LocalStorage
-            window.location.assign("/");  // redirect back to landing page
+            window.location.assign("/landing.html");  // redirect back to landing page
         });
 }
-//Register User
-function registerUser(signupData) {
-    const options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "accept": "application/json",
-        },
-        body: JSON.stringify(signupData),
-    };
-    
 
-    return fetch(apiBaseURL + "/api/users", options)
-        .then(response => response.json())
-        .then(registerData => {
-            if (registerData.hasOwnProperty("message")) {
-                console.error(registerData);
-                displayRegistrationError(registerData.message);
-                return null;
-            }
+// Add logout button if user is logged in
+document.addEventListener("DOMContentLoaded", function () {
+    if (isLoggedIn()) {
+        const nav = document.querySelector(".logout");
+        const logoutButton = document.createElement("button");
+        logoutButton.innerHTML = '<a href="landing.html" id="logoutButton" style="text-decoration:none;" class="color-animation">Logout</a>';
+        nav.appendChild(logoutButton);
 
-            console.log("User registered successfully:", registerData);
-
-            window.localStorage.setItem("login-data", JSON.stringify(registerData));
-            window.location.assign("../posts.html"); // redirect
-
-            return registerData;
-        })
-        .catch(error => {
-            console.error("Network or server error:", error);
-            displayRegistrationError("Unable to connect.");
+        document.getElementById("logoutButton").addEventListener("click", function (event) {
+            event.preventDefault();
+            logout();
         });
-}
-function displayRegistrationError(message) {
-    const errorElement = document.getElementById("registration-error");
-    if (errorElement) {
-        errorElement.textContent = message;
-        errorElement.style.display = 'block';
     }
-}
+});
