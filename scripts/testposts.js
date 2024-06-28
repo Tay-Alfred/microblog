@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     const postElement = document.createElement("div");
                     postElement.className = "post";
                     postElement.innerHTML = `
-                    <div class="block">
-                        <h2>${post.username}</h2>
-                        <p>${post.text}</p>
+                    <div class="block box-shadow-animation">
+                        <h2 class="block-tex color-animation">${post.username}</h2>
+                        <p class="block-text">${post.text}</p>
                     </div>
-                    `;
+                    <hr>`;
                     postsSection.appendChild(postElement);
                 });
             })
