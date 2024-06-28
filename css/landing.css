@@ -531,3 +531,78 @@ p {
 .section-break{
     margin: 20px;
 }
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    #middleBox, .button-container {
+        width: 50%;
+    }
+
+    #loginBox, .login-form {
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    #welcomeBox, #video, .spotify-player, .text-content, .video-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #middleBox {
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .button-container {
+        width: 80%;
+    }
+
+    .carousel-item {
+        height: auto;
+        left: 5%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcomeText {
+        width: 90%;
+    }
+
+    #middleBox {
+        width: 90%;
+    }
+
+    .button-container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .login-form input, .login-form button {
+        width: 100%;
+    }
+
+    .carousel-item {
+        height: auto;
+        left: 2%;
+    }
+
+    .footer-content {
+        font-size: x-small;
+    }
+
+    .logo-text {
+        font-size: 3rem;
+    }
+}

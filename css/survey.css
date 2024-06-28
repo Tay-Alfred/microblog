@@ -225,3 +225,36 @@ span{
 .section-break{
     margin: 20px;
 }
+@media (max-width: 1200px) {
+    #titleBox, #surveyBox, select, #username, #email, #name, #textArea, #submit {
+        max-width: 90%;
+        width: auto;
+    }
+
+    select {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #titleBox, #surveyBox, select, #username, #email, #name, #textArea, #submit {
+        max-width: 100%;
+        width: auto;
+    }
+
+    select {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #titleBox, #surveyBox, select, #username, #email, #name, #textArea, #submit {
+        max-width: 100%;
+        width: auto;
+        padding: 15px;
+    }
+
+    select {
+        width: 95%;
+    }
+}

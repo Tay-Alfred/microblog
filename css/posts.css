@@ -247,3 +247,67 @@ hr{
     font-weight: 700;
     font-style: italic;
   }
+  @media (max-width: 1200px) {
+    #initialUserPost, .help, .block, .spotify-player, #posts {
+        width: 70%;
+    }
+
+    .btn {
+        left: 50%;
+    }
+
+    .sticky-profile-box {
+        width: 250px;
+        height: 350px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    #initialUserPost, .help, .block, .spotify-player, #posts {
+        width: 90%;
+    }
+
+    .btn {
+        left: 50%;
+    }
+
+    .sticky-profile-box {
+        width: 220px;
+        height: 320px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    #initialUserPost, .help, .block, .spotify-player, #posts {
+        width: 100%;
+    }
+
+    .btn {
+        left: 50%;
+        width: 100px;
+    }
+
+    .block {
+        padding: 20px;
+    }
+
+    .sticky-profile-box {
+        width: 200px;
+        height: 300px;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+}

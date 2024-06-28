@@ -209,3 +209,43 @@ body{
 .section-break{
     margin: 20px;
 }
+@media (max-width: 1200px) {
+    .video, .help, .text-content, .footer-content {
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .video, .help, .text-content {
+        margin-top: 15%;
+    }
+
+    #youtube-video {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .video, .help, .text-content, .footer-content {
+        max-width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    #youtube-video {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .video, .help, .text-content, .footer-content {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    #youtube-video {
+        margin-left: 0;
+    }
+}
