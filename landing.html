@@ -43,13 +43,11 @@
             <img src="images/transparentgirl3.png" alt="Gamer girl Tye" id="gamerTye">
             <div class="container login box-shadow-animation" id="middleBox">
                 <!-- <span class="text-center">Welcome Home! Your canvas is waiting</span> -->
+                <label for="username" class="form-label">Username</label>
                 <input type="text" id="loginUsername" placeholder="Username" required>
+                <label for="password" class="form-label">Password</label>
                 <input type="password" id="loginPassword" placeholder="Password" required>
-                <label for="rememberMe">
-                    <input type="checkbox" id="rememberMe">
-                    Remember Me On This Device
-                </label>
-                <button class="btn color-animation box-shadow-animation" id="loginButton" type="submit">Log In</button>
+                <button class="btn color-animation box-shadow-animation" style="margin-top: 20px;" id="loginButton" type="submit">Log In</button>
             </div>
             <img src="images/transparent4.png" alt="Gamer Jesse" class="gamer-girls" id="gamerJesse">
         </div>
@@ -80,7 +78,7 @@
     </div>
 
     <div class="container lineUp chakra-petch-semibold" id="carouselContainer">
-        <p style="color: white;">Here's what you missed</p>
+        <p style="color: white;">The Latest Gossip From Our Lounge Family:</p>
         <div class="carousel text-center">
             <div class="carousel-item active carousel-card box-shadow-animation color-animation" style="background-color: black;">@vibequeen99<bk class="section-break"></bk>
 
@@ -138,7 +136,9 @@
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password"  autocomplete="password" required>
                         </div>
-                        <button type="submit" class="btn btn-primary" id="signupButton">Sign Up</button>
+                        <div class="button-area">
+                        <button type="submit" class="btn color-animation" id="signupButton">Sign Up</button>
+                    </div>
                     </form>
                     <div id="registration-error" style="display: none; color: red;"></div>
                 </div>

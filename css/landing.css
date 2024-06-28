@@ -33,6 +33,7 @@ body {
     color: white;
     padding: 50px;
     margin-bottom: 30px;
+    border-radius: 8px;
 }
 .color-animation {
     color: orange;
@@ -99,7 +100,7 @@ p {
     margin-top: 30px;
 }
 .btn {
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     background-color: black !important;
     width: 120px;
     font-size: 1rem;
@@ -130,7 +131,6 @@ p {
     position: relative;
     height: 400px;
     overflow: hidden;
-    padding-top: 45px;
 }
 .carousel-item {
     position: absolute;
@@ -284,6 +284,7 @@ p {
     opacity: 0.9;
     margin-bottom: 50px;
     box-shadow: 0px 7px 20px #52801fe6;
+    border-radius: 8px;
 }
 
 /* Spotify Player */
@@ -385,7 +386,30 @@ p {
     font-weight: 700;
     font-style: italic;
   }
-  
+#myModal{
+    background-image: linear-gradient(#52801f,#0e5135);
+    padding: 15px;
+}
+#fullname{
+    background-color: #aaa;
+}
+#username{
+    background-color: #aaa;
+}
+#password{
+    background-color: #aaa;
+}
+#signupButton{
+    height: 40px !important;
+    width: 150px;
+    
+}
+.button-area{
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+
+}
 .footer {
     margin-top: 40px;
     background-color: #79bd44; /* Green color */
@@ -493,7 +517,7 @@ p {
     }
   }
   /* registration modal */
-  
+
   /* Footer styles */
 .footer {
     background-color: #0e5135;
