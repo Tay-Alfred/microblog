@@ -15,7 +15,6 @@ body{
 }
 /* start of youtube css */
 .video{
-    background-color: #666;
     width: 65%;
     margin-left: auto;
     margin-right: auto;
@@ -25,14 +24,26 @@ body{
     z-index: -2;
     opacity: 0.9;
 }
+.help{
+    background-color: #000;
+    border-radius: 8px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    opacity: 0.8;
+    margin-bottom: 70px;
+
+}
 #youtube-video{
-    border: 10px solid red;
    justify-content: center;
    margin-left: 20%;
 }
 /* end of youtube css */
 .text-content{
-    border: 2px solid pink;
+    border-radius: 8px;
+    background-color: #000;
+    opacity: 0.8;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -54,48 +65,32 @@ body{
     75% { color: #79cac1; }
     100% { color: orange; }
   }
-#comment-section {
-    width: 50%;
-    margin: auto;
+  .box-shadow-animation {
+    animation-name: box-shadow-change;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
 }
 
-#comments-container {
-    margin-top: 20px;
+@keyframes box-shadow-change {
+    0% {
+        box-shadow: 0 0 10px orange;
+    }
+    25% {
+        box-shadow: 0 0 10px #e6b6bb;
+    }
+    50% {
+        box-shadow: 0 0 10px yellow;
+    }
+    75% {
+        box-shadow: 0 0 10px #79cac1;
+    }
+    100% {
+        box-shadow: 0 0 10px orange;
+    }
 }
 
-.comment {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-    position: relative;
-}
-
-.comment p {
-    margin: 0;
-}
-
-.like-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-}
-
-.like-button:disabled {
-    background-color: #ccc;
-}
-
-.like-count {
-    position: absolute;
-    right: 10px;
-    bottom: 40px;
-    font-size: 0.8em;
-    color: #666;
-}
 #submitButton{
     background-color: black;
 
@@ -111,4 +106,106 @@ body{
 }
 #offcanvasNavbar{
     z-index: 1050; /* Bootstrap's default z-index for offcanvas */
+}
+/* font styles */
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .silkscreen-bold {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .chakra-petch-light {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .chakra-petch-regular {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .chakra-petch-medium {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .chakra-petch-semibold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .chakra-petch-bold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .chakra-petch-light-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .chakra-petch-regular-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .chakra-petch-medium-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .chakra-petch-semibold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .chakra-petch-bold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+/* Footer styles */
+.footer {
+    background-color: #0e5135;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    bottom: 0;
+    opacity: 0.9;
+    margin-top: 40px;
+}
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+     font-size: small;
+}
+.footer h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 20px !important;
+}
+.section-break{
+    margin: 20px;
 }
