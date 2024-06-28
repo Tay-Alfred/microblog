@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     postElement.className = "post";
                     postElement.innerHTML = `
                     <div class="block box-shadow-animation">
-                        <h2 class="block-tex color-animation">${post.username}</h2>
-                        <p class="block-text">${post.text}</p>
+                        <h2 class="block-tex color-animation silkscreen-regular">${post.username}</h2>
+                        <p class="block-text chakra-petch-semibold">${post.text}</p>
                     </div>
                     <hr>`;
                     postsSection.appendChild(postElement);

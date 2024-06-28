@@ -2,6 +2,12 @@ body{
     background-image: url(https://deadbydaylight.com/static/ba329474c2a982956abc32cc4b67a120/bb1c4/Screenshot_3_33879d7bc3.jpg);
     background-size:cover;
     background-position:center;
+    top: 0;
+  }
+  .navbar{
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
   #offcanvasNavbar{
     background-color: #FF6600;
@@ -14,8 +20,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     max-width: 700px;
-    margin-top: 70px;
-
+    margin-top: 120px;
 }
 #title{
     text-align: center;
@@ -40,6 +45,7 @@ label{
     padding: 30px;
     border-radius: 5px;
     background-image:linear-gradient(#666666,#000000 );
+    margin-top: 60px;
 }
 fieldset{
     border-color:#FF6600 ;
@@ -118,3 +124,74 @@ span{
     color: #FF6600 ;
     text-shadow: 3px 2px 4px #3d5a66 ;
 }
+/* font styles */
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .silkscreen-bold {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .chakra-petch-light {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .chakra-petch-regular {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .chakra-petch-medium {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .chakra-petch-semibold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .chakra-petch-bold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .chakra-petch-light-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .chakra-petch-regular-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .chakra-petch-medium-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .chakra-petch-semibold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .chakra-petch-bold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
